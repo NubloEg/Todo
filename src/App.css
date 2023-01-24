@@ -1,0 +1,40 @@
+body{
+    background: #B07289;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease
+}
+
+.wrapper{
+    width: 422px;
+    background: #FFFFFE;
+    box-shadow: 0px 4.67778px 4.67778px #FFFFFF;
+    border-radius: 24px;
+    margin: 72px auto;
+}
+.container{
+    margin: 0 24px;
+}
+
+.h1{
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+.plus{
+    margin-top: 150px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: right;
+
+}
+
+.plus img{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plus img:hover{
+    transform: translateY(-5px)
+}

@@ -1,0 +1,55 @@
+.border{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 9.35556px #E6E6E6;
+    border-radius: 11.6944px;
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 15px 24px;
+
+}
+
+.button{
+    display: flex;
+    align-items:center;
+
+}
+
+.button img{
+    cursor: pointer;
+    transition:0.3s;
+
+}
+
+.button img:hover{
+    transform: translateY(-2px)
+}
+
+.pen{
+    padding-right: 6px;
+}
+.category{
+    margin-top: 9px;
+
+}
+
+.category span{
+    background: #ffffff;
+    padding: 3px 6px;
+    border-radius: 4.67778px;
+
+}
+
+span.Hard{
+    background: #FCEEF5;
+    
+}
+
+span.Normal{
+    background: #f6fab7;
+}
+
+span.Easy{
+    background: #aef4a5;
+}
