@@ -29,7 +29,7 @@ const filterDate=(m)=>{
 
 function App() {
     const [modalActive,setModalActive]=React.useState(false)
-
+   
     const [allTodos,setAllTodos]=React.useState([
         {id:1,title:"Купить хлеб",type:"Hard"},
         {id:2,title:"Купить стул",type:"Easy"},
@@ -51,6 +51,17 @@ function App() {
        
     }
 
+    const editTodo=(id,newTitle)=>{
+        debugger;
+        let new_all_todos=allTodos.filter((todo)=>{
+            if (todo.id===id){
+                todo.title=newTitle
+            }
+            return todo
+        })
+        setAllTodos( new_all_todos)
+    }
+
   return (
     <div className="wrapper">
         <div className="container">
@@ -58,9 +69,10 @@ function App() {
                 <h1>To Do List</h1>
             </div>
             <h2>{nowWeek[1]} {filterDate(nowWeek[0])} {nowWeek[2]}</h2>
-            <Form active={modalActive} setActive={setModalActive} addPost={addPost} />
+            <Form active={modalActive} setActive={setModalActive} addPost={addPost} title={"Добавить"} />
+            
             {allTodos.map(el=>{
-                return <Todo key={el.id}  id={el.id} title={el.title} type={el.type} remove={removeTodo}/>
+                return <Todo key={el.id}  id={el.id} title={el.title} type={el.type} remove={removeTodo} edit={editTodo}/>
             })}
             <div className="plus">
                 <img src={plus} alt="add" onClick={()=>setModalActive(true)}  />
